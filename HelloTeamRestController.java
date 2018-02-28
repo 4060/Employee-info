@@ -25,7 +25,7 @@ public class HelloTeamRestController {
 			return empService.findAll();
 		}
 	
-	  @RequestMapping(value = "/create", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)	  
+	  @RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)	  
 	  @ResponseBody
 	   public String create(@RequestBody Emp emp) {
 		  String userId = "";
@@ -38,7 +38,7 @@ public class HelloTeamRestController {
 	    catch (Exception ex) {
 	      return "Error creating the user: " + ex.toString();
 	    }
-	    return "User succesfully created with id = " + userId;
+	    return "User succesfully created with Id = " + userId;
 	  }
 	  
 	 
